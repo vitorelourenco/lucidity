@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "NODE_ENV=development npx nodemon --watch server --ext \"ts, js, json\" --exec \"ts-node src/server.ts --port=8080\""
+    "start:dev": "NODE_ENV=development npx nodemon --watch server --ext \"ts, js, json\" --exec \"ts-node src/server.ts --port=8080\"",
+    "build": "NODE_ENV=production rm -rf ./dist && npx eslint --fix src/**/* && tsc -p ."
   },
   "keywords": [],
   "author": "",
